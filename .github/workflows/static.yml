@@ -34,15 +34,6 @@ jobs:
       - name: Set up Node.js
         run: |
           sed -i '1s/^/const CLIENT_ID = "${{ secrets.CLIENT_ID }}";\nconst SPREADSHEET_ID = "${{ secrets.SPREADSHEET_ID }}";\n/' script.js
-      - name: Display file contents
-        run: cat script.js
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '20'
-      # - name: Build the site
-      #   run: |
-      #     echo "const CLIENT_ID = '${{ secrets.CLIENT_ID }}';const SPREADSHEET_ID = '${{ secrets.SPREADSHEET_ID }}';main();" >> ./script.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
