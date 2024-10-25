@@ -77,6 +77,7 @@ function handleSignoutClick() {
 async function listMajors() {
     let response;
     try {
+        alerat("Excel読み込み成功！！");
         response = await gapi.client.sheets.spreadsheets.values.get({
             spreadsheetId: SPREADSHEET_ID,
             range: RANGE,
